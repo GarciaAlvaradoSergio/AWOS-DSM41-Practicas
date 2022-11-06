@@ -146,7 +146,7 @@ a.selected{
 }
 
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 700px){
     .body_move{
         margin-left: 0px;
     }

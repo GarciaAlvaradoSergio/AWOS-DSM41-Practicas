@@ -39,12 +39,12 @@
             <div class="contact-info">
                 <h4>Mas información</h4>
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> Baker Street</li>
+                    <li><i class="fas fa-map-marker-alt"></i> UTVT Santa Maria Atarasquillo</li>
                     <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
                     <li><i class="fas fa-envelope-open-text"></i> contact@website.com</li>
                 </ul>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
-                <p>Company.com</p>
+                <p>Nota.com</p>
             </div>
         </div>        
 
