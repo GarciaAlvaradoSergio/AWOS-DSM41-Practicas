@@ -8,6 +8,7 @@
     <title>Menú</title>
 
     <link rel="stylesheet" href="{{asset('css/menu.css')}}">
+    <link rel="stylesheet" href="{{asset('css/form.css')}}">
 
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
