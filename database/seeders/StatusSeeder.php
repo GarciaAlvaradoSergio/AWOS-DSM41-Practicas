@@ -14,6 +14,6 @@ class StatusSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Status::factory(10)->create();
+        \App\Models\Status::factory(2)->create();
     }
 }
