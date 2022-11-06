@@ -17,7 +17,8 @@ class StatusFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombreEstado'=>$this->faker->randomElement(['Concluido',
+                                                        'Sin concluir',])
         ];
     }
 }

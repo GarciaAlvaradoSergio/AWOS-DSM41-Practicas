@@ -17,7 +17,10 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombreCategoria'=> $this->faker->randomElement(['Sin hacer',
+                                                            'Pendiente',
+                                                            'Importante',
+                                                            'Nota']) 
         ];
     }
 }
