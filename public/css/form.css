@@ -20,7 +20,7 @@ ul {
 }
 
 .contact-wrapper {
-    box-shadow: 0 0 40px 0 rgba(185, 27, 27, 0.3);
+    box-shadow: 0 0 100px 0 rgba(185, 27, 27, 0.3);
 
     border-top-left-radius:10px;
     border-bottom-left-radius: 10px;
@@ -96,7 +96,115 @@ ul {
     text-align: center;
     margin: 0 0 1rem 0;
 }
+/*:::Boton-Modal:::*/
+.boton-modal label{
+    padding: 5px 10px;
+    background-color: #202124;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    margin:auto 40%;
+}
+.boton-modal label:hover{
+    background-color: #185E83;
+}
+/*:::Ventana Modal:::*/
+#btn-modal{
+    display: inline-block;
+}
+.container-modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+#btn-modal:checked ~ .container-modal{
+    display: flex;
+}
+.content-modal{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.content-modal h2{
+    margin-bottom: 15px;
+}
+.content-modal p{
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+.content-modal .btn-cerrar{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.content-modal .btn-cerrar label{
+    padding: 7px 10px;
+    background-color: #5488a3;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.content-modal .btn-cerrar label:hover{
+    background-color:#185E83;
+}
+.cerrar-modal{
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    top:0; left: 0;
+    z-index: -1;
+}
+@media screen and (max-width:800px) {
+    .content-modal{
+        width: 90%;
+    }
+}
+/*:::Fin Ventana Modal:::*/
+#main-container{
+	margin: 150px auto;
+	width: 1000px;
+}
 
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td{
+	padding: 10px;
+}
+
+thead{
+	background-color: #202124;
+	border-bottom: solid 5px #B70E21;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+
+tr:hover td{
+	background-color: #B70E21;
+	color: white;
+}
+.btn{
+    margin:auto 50%;
+}
 /* LARGE SIZE */
 @media(min-width: 700px) {
     body {

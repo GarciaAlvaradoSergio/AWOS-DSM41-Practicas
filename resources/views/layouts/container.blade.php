@@ -1,9 +1,9 @@
 @yield('container')
 @include('layouts.menu')
 <main>
-    <div class="content">
+    <div class="container">
 
-        <h1 class="logo">Ejemplo de <span>formulario</span></h1>
+        <h1 class="logo">Ejemplo de <span>formulario</span></h1> <br>
 
         <div class="contact-wrapper animated bounceInUp">
             <div class="contact-form">
