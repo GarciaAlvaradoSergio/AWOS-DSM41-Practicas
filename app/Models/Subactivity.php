@@ -14,4 +14,9 @@ class Subactivity extends Model
     public function actividad(){
         return $this->belongsTo(Activity::class);
     }
+    protected $fillable = [
+        'actividad_id',
+        'estado_id',
+        'nombre',
+    ];
 }

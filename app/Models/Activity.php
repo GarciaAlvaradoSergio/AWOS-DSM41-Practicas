@@ -21,4 +21,10 @@ class Activity extends Model
     public function subactividad(){
         return $this->hasMany(Subactivity::class);
     }
+    protected $fillable = [
+        'categoria_id',
+        'estado_id',
+        'titulo',
+        'fecha'
+    ];
 }

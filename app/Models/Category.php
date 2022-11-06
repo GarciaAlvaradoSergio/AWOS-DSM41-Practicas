@@ -14,4 +14,7 @@ class Category extends Model
     public function actividad(){
         return $this->hasOne(Activity::class, 'foreign_key', 'local_key');
     }
+    protected $fillable = [
+        'nombreCategoria',
+    ];
 }

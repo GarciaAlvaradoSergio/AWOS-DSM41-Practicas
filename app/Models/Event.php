@@ -17,4 +17,10 @@ class Event extends Model
     public function estado(){
         return $this->hasOne(Status::class);
     }
+    protected $fillable = [
+        'nombreEvento',
+        'categoria_id',
+        'fecha',
+        'estado_id'
+    ];
 }

@@ -20,4 +20,7 @@ class Status extends Model
     public function subactividad(){
         return $this->belongsTo(Subactivity::class, 'foreign_key', 'other_key');
     }
+    protected $fillable = [
+        'nombreEstado',
+    ];
 }
