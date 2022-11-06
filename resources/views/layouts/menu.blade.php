@@ -8,7 +8,7 @@
 <div class="menu__side" id="menu_side">
 
     <div class="name__page">
-        <i class="fab fa-youtube"></i>
+        <i class="fa-solid fa-bomb"></i>
         <h4>Practicas</h4>
     </div>
 
@@ -30,7 +30,7 @@
         
         <a href="/">
             <div class="option">
-                <i class="fas fa-video" title="Eventos"></i>
+                <i class="fas fa-calendar-days" title="Eventos"></i>
                 <h4>Eventos</h4>
             </div>
         </a>
