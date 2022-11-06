@@ -14,7 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('activities', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->unsignedInteger('categoria_id');
+            $table->unsignedInteger('estado_id');
+            $table->foreign('categoria_id')->references('id')->on('categories');
+            $table->foreign('estado_id')->references('id')->on('statuses');
+            $table->string('titulo');
+            $table->date('fecha')->nullable();
             $table->timestamps();
         });
     }

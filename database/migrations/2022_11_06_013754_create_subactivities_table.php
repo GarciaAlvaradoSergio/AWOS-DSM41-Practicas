@@ -14,7 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('subactivities', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->unsignedInteger('actividad_id');
+            $table->foreign('actividad_id')->references('id')->on('activities');
+            $table->unsignedInteger('estado_id');
+            $table->foreign('estado_id')->references('id')->on('statuses');
+            $table->string('nombre');
             $table->timestamps();
         });
     }
