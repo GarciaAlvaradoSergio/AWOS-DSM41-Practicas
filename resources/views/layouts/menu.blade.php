@@ -21,7 +21,7 @@
             </div>
         </a>
 
-        <a href="/">
+        <a href="/user">
             <div class="option">
                 <i class="far fa-id-badge" title="Usuarios"></i>
                 <h4>Usuarios</h4>
