@@ -14,6 +14,6 @@ class SubactivitySeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Subactivity::factory(10)->create();
     }
 }
