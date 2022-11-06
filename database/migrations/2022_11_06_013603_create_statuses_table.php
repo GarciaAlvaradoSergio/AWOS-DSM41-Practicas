@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('statuses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombreEstado');
+            $table->timestamps();
         });
     }
 
