@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombreEvento');
             $table->unsignedInteger('categoria_id');
             $table->foreign('categoria_id')->references('id')->on('categories');
             $table->date('fecha')->nullable();
