@@ -1,52 +1,68 @@
-@yield('container')
-@include('layouts.menu')
-<main>
-    <div class="container">
+@yield('container') 
+@include('layouts.menu')               
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
 
-        <h1 class="logo">Ejemplo de <span>formulario</span></h1> <br>
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                    </div>
 
-        <div class="contact-wrapper animated bounceInUp">
-            <div class="contact-form">
-                <h3>Información</h3>
-                <form action="">
-                    <p>
-                        <label>Nombre</label>
-                        <input type="text" name="fullname">
-                    </p>
-                    <p>
-                        <label>Agregar correo</label>
-                        <input type="email" name="email">
-                    </p>
-                    <p>
-                        <label>Agregar contraseña</label>
-                        <input type="password" name="phone">
-                    </p>
-                    <p>
-                        <label>Adicional</label>
-                        <input type="text" name="affair">
-                    </p>
-                    <p class="contact-form">
-                       <label>Mensaje</label> 
-                        <textarea name="message" rows="3"></textarea>
-                    </p>
-                    <p class="block">
-                        <button>
-                            Send
-                        </button>
-                    </p>
-                </form>
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+                        <div class="container-fluid">
+
+                            <!-- Page Heading -->
+                            <h1 class="h3 mb-2 text-gray-800">Tabla de ejemplo</h1>
+                            <!-- DataTales Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Position</th>
+                                                    <th>Office</th>
+                                                    <th>Age</th>
+                                                    <th>Start date</th>
+                                                    <th>Salary</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Position</th>
+                                                    <th>Office</th>
+                                                    <th>Age</th>
+                                                    <th>Start date</th>
+                                                    <th>Salary</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Tiger Nixon</td>
+                                                    <td>System Architect</td>
+                                                    <td>Edinburgh</td>
+                                                    <td>61</td>
+                                                    <td>2011/04/25</td>
+                                                    <td>$320,800</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+
+                </div>
+                <!-- /.container-fluid -->
+
             </div>
-            <div class="contact-info">
-                <h4>Mas información</h4>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> UTVT Santa Maria Atarasquillo</li>
-                    <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
-                    <li><i class="fas fa-envelope-open-text"></i> contact@website.com</li>
-                </ul>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
-                <p>Nota.com</p>
-            </div>
-        </div>        
-
-    </div>
-</main>
+            <!-- End of Main Content -->
