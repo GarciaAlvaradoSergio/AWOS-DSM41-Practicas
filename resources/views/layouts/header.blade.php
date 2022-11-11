@@ -25,5 +25,39 @@
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
+<style>
+    .tarjeta{
+        width: 300px;
+        min-height: 350px;
+        background-color:#e7e7ea;
+        margin:0 auto; 
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 6px 6px 20px rgba(0, 0, 0 ,0.24);
+        background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+        background-blend-mode: screen;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        text-align: center;
+        padding: .1px;
+    }
+    .card__person{
+        background-image: url('/scr/profile.svg');
+        background-size: cover;
+        background-position: center;
+        width: 110px;
+        height: 110px;
+        margin: 0 auto;
+        margin-top: 105px;
+        border-radius: 50%;
+        border:7px solid #fff;
+    }
+
+    .card__name{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+</style>
 
 <body id="page-top">

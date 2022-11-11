@@ -51,7 +51,7 @@
                                                                                     margin:5px auto;
                                                                                     display:inline-flex;
                                                                                     width: auto 50px;">
-                                                            <a href="#" class="btn btn-info btn-circle" style="margin: 5px 5px;">
+                                                            <a href="users/{{$item->id}}" class="btn btn-info btn-circle" style="margin: 5px 5px;">
                                                                 <i class="fas fa-info-circle"></i>
                                                             </a>
                                                             <a href="#" class="btn btn-warning btn-circle" style="margin: 5px 5px;">
@@ -61,8 +61,8 @@
                                                                 <i class="fas fa-trash"></i>
                                                             </a>
                                                         </div>
+                                                @endforeach
                                                     </td>
-                                                    @endforeach
                                                 </tr>
                                             </tbody>
                                         </table>
