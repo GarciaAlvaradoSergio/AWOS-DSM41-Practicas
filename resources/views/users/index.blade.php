@@ -22,8 +22,8 @@
                                     <div class="table-responsive">
                                         <div class="card mb-3 border-left-primary" style="width: 5px 15px;">
                                             <div class="card-body" style="display: inline-flex;">
-                                                <p style="margin: auto 20px;">Agregar estudiante</p>
-                                                <button type="button" class="btn btn-primary">Agregar</button>
+                                                <p style="margin: auto 20px;">Agregar estudiante</p><a href="users/create"
+                                                type="button" class="btn btn-primary">Agregar</a>
                                             </div>
                                         </div>
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -42,9 +42,9 @@
                                                 @foreach ($users as $item)
                                                 <tr>
                                                     <td>{{$item->id}}</td>
-                                                    <td>{{ $item-> name}}</td>
-                                                    <td>{{ $item-> email}}</td>
-                                                    <td>{{ $item-> password}}</td>
+                                                    <td>{{ $item-> nombre}}</td>
+                                                    <td>{{ $item-> correo}}</td>
+                                                    <td>{{ $item-> contraseña}}</td>
                                                     <td>{{ $item-> created_at}}</td>
                                                     <td>
                                                         <div class="btn-gruop" style="padding-inline: 20px;
@@ -54,7 +54,7 @@
                                                             <a href="users/{{$item->id}}" class="btn btn-info btn-circle" style="margin: 5px 5px;">
                                                                 <i class="fas fa-info-circle"></i>
                                                             </a>
-                                                            <a href="#" class="btn btn-warning btn-circle" style="margin: 5px 5px;">
+                                                            <a href="users/{{$item->id}}/edit" class="btn btn-warning btn-circle" style="margin: 5px 5px;">
                                                                 <i class="fas fa-exclamation-triangle"></i>
                                                             </a>
                                                             <a href="#" class="btn btn-danger btn-circle" style="margin: 5px 5px;">
