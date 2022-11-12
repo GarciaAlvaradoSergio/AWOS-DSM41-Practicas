@@ -31,9 +31,10 @@
 
                                                 <tr>
                                                     <th>ID</th>
+                                                    <th>Usuario</th>
                                                     <th>Nombre</th>
+                                                    <th>Apellido</th>
                                                     <th>Correo</th>
-                                                    <th>Contraseña</th>
                                                     <th>Registro</th>
                                                     <th>Operaciónes</th>
                                                 </tr>
@@ -42,32 +43,59 @@
                                                 @foreach ($users as $item)
                                                 <tr>
                                                     <td>{{$item->id}}</td>
+                                                    <td>{{ $item-> usuario}}</td>
                                                     <td>{{ $item-> nombre}}</td>
+                                                    <td>{{ $item-> apellido}}</td>
                                                     <td>{{ $item-> correo}}</td>
-                                                    <td>{{ $item-> contraseña}}</td>
+                                                   <!-- <td>{{ $item-> contraseña}}</td> -->
                                                     <td>{{ $item-> created_at}}</td>
                                                     <td>
                                                         <div class="btn-gruop" style="padding-inline: 20px;
                                                                                     margin:5px auto;
                                                                                     display:inline-flex;
                                                                                     width: auto 50px;">
-                                                            <a href="users/{{$item->id}}" class="btn btn-info btn-circle" style="margin: 5px 5px;">
+                                                            <a href="{{route ('users.show',$item->id)}}" class="btn btn-info btn-circle" style="margin: 5px 5px;">
                                                                 <i class="fas fa-info-circle"></i>
                                                             </a>
-                                                            <a href="users/{{$item->id}}/edit" class="btn btn-warning btn-circle" style="margin: 5px 5px;">
+                                                            <a href="{{route('users.edit',$item->id)}}" class="btn btn-warning btn-circle" style="margin: 5px 5px;">
                                                                 <i class="fas fa-exclamation-triangle"></i>
                                                             </a>
-                                                            <a href="#" class="btn btn-danger btn-circle" style="margin: 5px 5px;">
+                                                            <button type="submit" data-toggle="modal" data-target="#deleteModal{{$item->id}}" class="btn btn-danger btn-circle" style="margin: 5px 5px;">
                                                                 <i class="fas fa-trash"></i>
-                                                            </a>
+                                                            </button>                                            
                                                         </div>
-                                                @endforeach
                                                     </td>
                                                 </tr>
+                                                <!-- delete Modal-->
+                                                <div class="modal fade" id="deleteModal{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">¿Listo para eliminar?</h5>
+                                                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">×</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">Seleccione "Aceptar" si está listo para eliminar registro.</div>
+                                                            <div class="modal-footer">
+                                                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                                                                <form action="{{route('users.destroy', $item->id)}}" method="POST">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button class="btn btn-danger" type="submit">Aceptar</button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- delete Modal termina-->
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
                             </div>
+                    </div>
                     </div>
 @include('layouts.footer')

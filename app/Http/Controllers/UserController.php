@@ -39,7 +39,10 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
-        $users = User::create($request->all());
+        $users = User::create($request->only('nombre','apellido','usuario','correo')
+                +[
+                    'contraseña' =>bcrypt($request->input('contraseña'))
+                ]);
         return redirect()->route('users.show', $users->id)->with('success', 'Estudiante creado correctamente');
     }
 
@@ -49,9 +52,9 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        $user = User::find($id);
+        //$user = User::findOrFail($id);
         return view('users.show', compact('user'));
     }
 
@@ -61,9 +64,9 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        $user = User::find($id);
+        //$user = User::find($id);
         //return $users;
         return view('users.edit', compact('user'));
     }
@@ -77,10 +80,18 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, $id)
     {
-        $user = User::find($id);
-        $input=$request->all();
-        $user->update($input);
-        return redirect('users')->with('messege','Se ha actualizado el registro correctamente');
+        $user = User::findOrFail($id);
+        $data = $request ->only ('nombre','apellido','usuario','correo');
+        if(trim($request->contraseña)=='')
+        {
+            $data=$request->except('contraseña');
+        }
+        else{
+            $data=$request->all();
+            $data['contraseña']=bcrypt($request->contraseña);
+        }
+        $user->update($data);
+        return redirect()->route('users.index')->with('messege','Usuario editado correctamente');
     }
 
     /**
@@ -91,9 +102,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        $user = User::findOrFail($id);
-
         $user->delete();
-        return redirect('user')->with('danger','Se borro correctamente el usuario');
+        return redirect('users')->with('danger','Se borro correctamente el usuario');
     }
 }

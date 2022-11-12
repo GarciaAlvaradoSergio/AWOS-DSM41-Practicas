@@ -13,12 +13,12 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="text-center">
-                                            <form class="row g-3" action="{{url('users/' .$user->id) }}">
+                                            <form class="row g-3" action="{{route ('users.update',$user->id)}}" method="post">
                                                 @csrf
-                                                @method('PATCH')
+                                                @method('PUT')
                                                 <div class="col-md-6">
                                                   <label for="correo" class="form-label">Correo</label>
-                                                  <input type="email" name="correo" class="form-control" id="inputEmail4" value="{{$user->correo}}">
+                                                  <input type="email" name="correo" class="form-control" value="{{$user->correo}}">
                                                   @if ($errors->has('correo'))
                                                   <span class="error text-danger" for="input-correo">{{ $errors->first('correo') }}</span>
                                                   @endif
@@ -29,11 +29,11 @@
                                                 </div>
                                                 <div class="col-6">
                                                   <label for="nombre" class="form-label">Nombre</label>
-                                                  <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" value="{{$user->nombre}}">
+                                                  <input type="text" name="nombre" class="form-control"  value="{{$user->nombre}}">
                                                 </div>
                                                 <div class="col-6">
                                                   <label for="apellido" class="form-label">Apellido</label>
-                                                  <input type="text" name="apellido" class="form-control" id="apellido" placeholder="Apellido" value="{{$user->apellido}}">
+                                                  <input type="text" name="apellido" class="form-control" value="{{$user->apellido}}">
                                                 </div>
                                                 <div class="col-md-6">
                                                 </div>
@@ -43,7 +43,7 @@
                                                 </div>
                                                 <div class="col-12">
                                                   <label for="usuario" class="form-label">Usuario</label>
-                                                  <input type="text" name="usuario" class="form-control" id="usuario" value="{{$user->usuario}}">
+                                                  <input type="text" name="usuario" class="form-control" value="{{$user->usuario}}">
                                                 </div>
                                                 <div class="col-12">
                                                   <a class="btn btn-danger m-3"  href="/users" >Cancelar</a>
