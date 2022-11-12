@@ -32,7 +32,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
@@ -42,7 +42,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Componentes:</h6>
                         <a class="collapse-item" href="/users">Estudiantes</a>
-                        <a class="collapse-item" href="/">Eventos</a>
+                        <a class="collapse-item" href="/events">Eventos</a>
                         <a class="collapse-item" href="/">Actividades</a>       
                     </div>
                 </div>
