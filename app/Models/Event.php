@@ -9,13 +9,13 @@ class Event extends Model
 {
     use HasFactory;
     public function usuario(){
-    return $this->belongsTo(User::class, 'foreign_key', 'other_key');
+    return $this->belongsTo(User::class);
     }
     public function categoria(){
-        return $this->belongsTo(Category::class);
+        return $this->hasOne(Category::class, 'id','categoria_id');
     }
     public function estado(){
-        return $this->hasOne(Status::class);
+        return $this->hasOne(Status::class, 'id','estado_id');
     }
     protected $fillable = [
         'nombreEvento',

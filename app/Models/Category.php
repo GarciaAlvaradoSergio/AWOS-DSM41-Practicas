@@ -9,10 +9,10 @@ class Category extends Model
 {
     use HasFactory;
     public function evento(){
-        return $this->hasOne(Evento::class, 'foreign_key', 'local_key');
+        return $this->belongsTo(Evento::class);
     }
     public function actividad(){
-        return $this->hasOne(Activity::class, 'foreign_key', 'local_key');
+        return $this->hasOne(Activity::class);
     }
     protected $fillable = [
         'nombreCategoria',

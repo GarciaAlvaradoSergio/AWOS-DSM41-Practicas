@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreEventRequest;
 use App\Http\Requests\UpdateEventRequest;
 use App\Models\Event;
+use App\Models\Category;
+use App\Models\Status;
 
 class EventController extends Controller
 {
@@ -15,7 +17,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::all();
+        return view ('events.index', compact ('events'));
     }
 
     /**
@@ -25,7 +28,9 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        $statuses = Status::all();
+        return view ('events.add',compact('categories', 'statuses'));
     }
 
     /**
@@ -36,7 +41,8 @@ class EventController extends Controller
      */
     public function store(StoreEventRequest $request)
     {
-        //
+        $events = Event::create($request->all());
+        return redirect()->route('events.show', $events->id)->with('success', 'Libro creado correctamente');
     }
 
     /**
@@ -47,7 +53,7 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        return view ('events.show', compact('event'));
     }
 
     /**
@@ -58,7 +64,10 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        $categories = Category::all();
+        $statuses = Status::all();
+        return view('events.edit', compact('categories','statuses','event'));
+        //return view('events.edit', compact('categories', 'statuses'));
     }
 
     /**
@@ -70,7 +79,9 @@ class EventController extends Controller
      */
     public function update(UpdateEventRequest $request, Event $event)
     {
-        //
+        $data = $request ->all();
+        $event->update($data);
+        return redirect()->route('events.index')->with('messege','Usuario editado correctamente');
     }
 
     /**
@@ -81,6 +92,7 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        //
+        $event->delete();
+        return redirect('events')->with('danger','Se borro correctamente el usuario');
     }
 }
