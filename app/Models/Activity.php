@@ -16,7 +16,7 @@ class Activity extends Model
         return $this->belongsTo(Category::class);
     }
     public function estado(){
-        return $this->hasOne(Status::class);
+        return $this->hasOne(Status::class, 'id', 'estado_id');
     }
     public function subactividad(){
         return $this->hasMany(Subactivity::class);

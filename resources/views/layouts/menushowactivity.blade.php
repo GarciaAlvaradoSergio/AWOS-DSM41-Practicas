@@ -1,4 +1,4 @@
-@yield('menushownote')
+@yield('menushowactivity')
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -42,8 +42,8 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Componentes:</h6>
                         <a class="collapse-item" href="/users">Estudiantes</a>
-                        <a class="collapse-item active" href="/events">Eventos</a>
-                        <a class="collapse-item" href="/activities">Actividades</a>       
+                        <a class="collapse-item" href="/events">Eventos</a>
+                        <a class="collapse-item active" href="/activities">Actividades</a>       
                     </div>
                 </div>
             </li>
@@ -161,7 +161,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Sergio García</span>
                                 <img class="img-profile rounded-circle"
-                                    src="{{asset('img/undraw_profile.svg')}}">
+                                    src="{{asset('/img/undraw_profile.svg')}}">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

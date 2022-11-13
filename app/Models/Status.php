@@ -13,8 +13,8 @@ class Status extends Model
         return $this->belongsTo(Event::class, 'foreign_key', 'other_key');
     }
 
-    public function estado(): BelongsTo{
-        return $this->belongsTo(Status::class, 'foreign_key', 'other_key');
+    public function actividad(): BelongsTo{
+        return $this->belongsTo(Activity::class, 'foreign_key', 'other_key');
     } 
 
     public function subactividad(){
