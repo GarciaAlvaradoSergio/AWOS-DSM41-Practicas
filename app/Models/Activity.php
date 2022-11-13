@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Activity extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     public function usuario(){
         return $this->belongsTo(User::class, 'foreign_key', 'other_key');

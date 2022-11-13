@@ -17,11 +17,12 @@ return new class extends Migration
             $table->increments('id');
             $table->string('nombreEvento');
             $table->unsignedInteger('categoria_id');
-            $table->foreign('categoria_id')->references('id')->on('categories');
+            $table->foreign('categoria_id')->references('id')->on('categories')->onDelete('cascade');
             $table->date('fecha')->nullable();
             $table->timestamps();
             $table->unsignedInteger('estado_id');
-            $table->foreign('estado_id')->references('id')->on('statuses');
+            $table->foreign('estado_id')->references('id')->on('statuses')->onDelete('cascade');
+            $table->SoftDeletes();
         });
     }
 

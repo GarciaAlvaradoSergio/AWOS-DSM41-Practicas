@@ -16,11 +16,12 @@ return new class extends Migration
         Schema::create('subactivities', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('actividad_id');
-            $table->foreign('actividad_id')->references('id')->on('activities');
+            $table->foreign('actividad_id')->references('id')->on('activities')->onDelete('cascade');
             $table->unsignedInteger('estado_id');
-            $table->foreign('estado_id')->references('id')->on('statuses');
+            $table->foreign('estado_id')->references('id')->on('statuses')->onDelete('cascade');
             $table->string('nombre');
             $table->timestamps();
+            $table->SoftDeletes();
         });
     }
 
