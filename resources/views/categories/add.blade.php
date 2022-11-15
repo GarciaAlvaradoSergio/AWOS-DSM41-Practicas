@@ -17,7 +17,7 @@
                                            
                                                 <div class="col-12">
                                                     <label for="inputAddress" class="form-label">Nombre de la Categoria</label>
-                                                    <input type="text" name="nombreCategoria" class="form-control" id="inputAddress" placeholder="Categoria">
+                                                    <input type="text" name="nombreCategoria" class="form-control" id="inputAddress" placeholder="Categoria" required>
                                                   </div>
                                                 <div class="col-md-6">
                                                 </div>

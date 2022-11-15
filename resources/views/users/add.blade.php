@@ -17,23 +17,23 @@
                                            
                                                 <div class="col-md-6">
                                                   <label for="inputEmail4" class="form-label">Correo</label>
-                                                  <input type="email" name="correo" class="form-control" id="inputEmail4" autofocus>
+                                                  <input type="email" name="correo" class="form-control" id="inputEmail4" autofocus required>
                                                 </div>
                                                 <div class="col-md-6">
                                                   <label for="inputPassword4" class="form-label">Contraseña</label>
-                                                  <input type="password" name="contraseña" class="form-control" id="inputPassword4">
+                                                  <input type="password" name="contraseña" class="form-control" id="inputPassword4" required>
                                                 </div>
                                                 <div class="col-6">
                                                   <label for="inputAddress" class="form-label">Nombre</label>
-                                                  <input type="text" name="nombre" class="form-control" id="inputAddress" placeholder="Estudiante">
+                                                  <input type="text" name="nombre" class="form-control" id="inputAddress" placeholder="Estudiante" required>
                                                 </div>
                                                 <div class="col-6">
                                                     <label for="inputAddress" class="form-label">Apellido</label>
-                                                    <input type="text" name="apellido" class="form-control" id="inputAddress" placeholder="Estudiante">
+                                                    <input type="text" name="apellido" class="form-control" id="inputAddress" placeholder="Estudiante" required>
                                                   </div>
                                                 <div class="col-12">
                                                     <label for="inputAddress" class="form-label">Usuario</label>
-                                                    <input type="text" name="usuario" class="form-control" id="inputAddress" placeholder="Estudiante">
+                                                    <input type="text" name="usuario" class="form-control" id="inputAddress" placeholder="Estudiante" required>
                                                   </div>
                                                 <div class="col-md-6">
                                                 </div>
@@ -42,12 +42,6 @@
                                                 <div class="col-md-2">
                                                 </div>
                                                 <div class="col-12">
-                                                  <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                                                    <label class="form-check-label" for="gridCheck">
-                                                      Permitir
-                                                    </label required>
-                                                  </div>
                                                 </div>
                                                 <div class="col-12">
                                                     <a class="btn btn-danger m-3"  href="/users" >Cancelar</a>

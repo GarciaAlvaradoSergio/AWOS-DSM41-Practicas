@@ -17,15 +17,15 @@
 
             <div class="col-md-12">
               <label for="inputEmail4" class="form-label">Titulo</label>
-              <input type="text" name="titulo" class="form-control" id="inputEmail4" autofocus>
+              <input type="text" name="titulo" class="form-control" id="inputEmail4" autofocus required>
             </div>
             <div class="col-md-6">
               <label for="inputPassword4" class="form-label">Fecha</label>
-              <input type="date" name="fecha" class="form-control" id="inputPassword4">
+              <input type="date" name="fecha" class="form-control" id="inputPassword4" required>
             </div>
             <div class="col-6">
               <label for="inputCategories" class="form-label">Categoria</label>
-              <select class="form-control" name='categoria_id' id="">
+              <select class="form-control" name='categoria_id' id="" required>
                 @foreach ($categories as $category )
                 <option class="form-control" value="{{$category->id}}">{{$category->nombreCategoria}}</option>
                 @endforeach
@@ -33,7 +33,7 @@
             </div>
             <div class="col-12">
               <label for="inputStatuses" class="form-label">Estado</label>
-              <select class="form-control" name='estado_id' id="">
+              <select class="form-control" name='estado_id' id="" required>
                 @foreach ($statuses as $status )
                 <option class="form-control" value="{{$status->id}}">{{$status->nombreEstado}}</option>
                 @endforeach
@@ -46,12 +46,6 @@
             <div class="col-md-2">
             </div>
             <div class="col-12">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                  Permitir
-                </label required>
-              </div>
             </div>
             <div class="col-12">
               <a class="btn btn-danger m-3" href="/activities">Cancelar</a>
