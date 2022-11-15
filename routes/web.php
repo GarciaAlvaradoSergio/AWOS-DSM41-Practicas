@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +25,5 @@ Route::resource('users', UserController::class);
 Route::resource('events', EventController::class);
 
 Route::resource('activities', ActivityController::class);
+
+Route::resource('categories', CategoryController::class);

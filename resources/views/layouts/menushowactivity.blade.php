@@ -43,7 +43,8 @@
                         <h6 class="collapse-header">Componentes:</h6>
                         <a class="collapse-item" href="/users">Estudiantes</a>
                         <a class="collapse-item" href="/events">Eventos</a>
-                        <a class="collapse-item active" href="/activities">Actividades</a>       
+                        <a class="collapse-item active" href="/activities">Actividades</a> 
+                        <a class="collapse-item" href="/categories">Categorias</a>      
                     </div>
                 </div>
             </li>

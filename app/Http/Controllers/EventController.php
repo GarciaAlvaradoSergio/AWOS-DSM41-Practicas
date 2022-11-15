@@ -81,7 +81,7 @@ class EventController extends Controller
     {
         $data = $request ->all();
         $event->update($data);
-        return redirect()->route('events.index')->with('messege','Usuario editado correctamente');
+        return redirect()->route('events.index')->with('messege','Evento editado correctamente');
     }
 
     /**
