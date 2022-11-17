@@ -31,7 +31,7 @@
         min-height: 350px;
         background-color:#e7e7ea;
         margin:0 auto; 
-        margin-top: 20px;
+        margin-top: 10px;
         border-radius: 10px;
         box-shadow: 6px 6px 20px rgba(0, 0, 0 ,0.24);
         background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);

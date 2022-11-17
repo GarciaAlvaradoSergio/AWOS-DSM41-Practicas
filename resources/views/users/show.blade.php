@@ -22,6 +22,8 @@
 
         <section class="tarjeta">
             <div class="card__person">
+                <a href="{{ route('users.index') }}" class="btn btn-sm btn-success mr-0 boton" style="margin-left: 120px;
+                                                                                                      margin-top:50px;"> Volver </a>
             </div>
             <h5 class="card__name">{{$user->nombre }} {{ $user->apellido}}</h5>
             <p class="card__position">Estudiante</p>
@@ -30,7 +32,6 @@
             <div class="button-container">
                 <p class="card__position">Usuario:</p>
                 <p class="card__position">{{$user->usuario}}</p>
-                <a href="{{ route('users.index') }}" class="btn btn-sm btn-success mr-0"> Volver </a>
             </div>
         </section>
 
