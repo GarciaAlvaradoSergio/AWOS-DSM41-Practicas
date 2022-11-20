@@ -21,7 +21,7 @@ class Activity extends Model
         return $this->hasOne(Status::class, 'id', 'estado_id');
     }
     public function subactividad(){
-        return $this->hasMany(Subactivity::class);
+        return $this->hasMany(Subactivity::class , 'id', 'actividad_id' );
     }
     protected $fillable = [
         'categoria_id',

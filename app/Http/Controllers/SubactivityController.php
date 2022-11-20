@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreSubactivityRequest;
 use App\Http\Requests\UpdateSubactivityRequest;
 use App\Models\Subactivity;
+use App\Models\Activity;
+use App\Models\Status;
 
 class SubactivityController extends Controller
 {
@@ -15,7 +17,8 @@ class SubactivityController extends Controller
      */
     public function index()
     {
-        //
+        $subactivities = Subactivity::all();
+        return view ('subactivities.index', compact ('subactivities'));
     }
 
     /**
@@ -25,7 +28,9 @@ class SubactivityController extends Controller
      */
     public function create()
     {
-        //
+        $activities = Activity::all();
+        $statuses = Status::all();
+        return view ('subactivities.add',compact('activities', 'statuses'));
     }
 
     /**
@@ -36,7 +41,8 @@ class SubactivityController extends Controller
      */
     public function store(StoreSubactivityRequest $request)
     {
-        //
+        $activities = Subactivity::create($request->all());
+        return redirect()->route('subactivities.show', $activities->id)->with('success', 'Subactividad creada correctamente');
     }
 
     /**
@@ -47,7 +53,8 @@ class SubactivityController extends Controller
      */
     public function show(Subactivity $subactivity)
     {
-        //
+        return view ('subactivities.show', compact('subactivity'));
+
     }
 
     /**
@@ -58,7 +65,9 @@ class SubactivityController extends Controller
      */
     public function edit(Subactivity $subactivity)
     {
-        //
+        $activities = Activity::all();
+        $statuses = Status::all();
+        return view('subactivities.edit', compact('activities','statuses','subactivity'));
     }
 
     /**
@@ -70,7 +79,9 @@ class SubactivityController extends Controller
      */
     public function update(UpdateSubactivityRequest $request, Subactivity $subactivity)
     {
-        //
+        $data = $request ->all();
+        $subactivity->update($data);
+        return redirect()->route('subactivities.index')->with('messege','Sub-actividad editada correctamente');
     }
 
     /**

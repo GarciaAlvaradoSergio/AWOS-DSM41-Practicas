@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SubactivityController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +28,5 @@ Route::resource('events', EventController::class);
 Route::resource('activities', ActivityController::class);
 
 Route::resource('categories', CategoryController::class);
+
+Route::resource('subactivities', SubactivityController::class);

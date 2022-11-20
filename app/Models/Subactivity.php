@@ -10,7 +10,7 @@ class Subactivity extends Model
 {
     use HasFactory, SoftDeletes;
     public function estado(){
-        return $this->hasOne(Status::class);
+        return $this->hasOne(Status::class, 'id','estado_id');
     }
     public function actividad(){
         return $this->belongsTo(Activity::class);
