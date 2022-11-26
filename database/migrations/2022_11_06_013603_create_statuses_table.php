@@ -17,6 +17,8 @@ return new class extends Migration
             $table->increments('id');
             $table->string('nombreEstado');
             $table->timestamps();
+            $table->SoftDeletes();
+
         });
     }
 
