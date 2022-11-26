@@ -17,7 +17,7 @@
                                            
                                                 <div class="col-md-6">
                                                   <label for="inputEmail4" class="form-label">Correo</label>
-                                                  <input type="email" name="correo" class="form-control" id="inputEmail4" autofocus required>
+                                                  <input type="email" name="correo" class="form-control" id="inputEmail4" placeholder="ejemplo@ejemplo.com"autofocus required>
                                                 </div>
                                                 <div class="col-md-6">
                                                   <label for="inputPassword4" class="form-label">Contraseña</label>
@@ -33,7 +33,7 @@
                                                   </div>
                                                 <div class="col-12">
                                                     <label for="inputAddress" class="form-label">Usuario</label>
-                                                    <input type="text" name="usuario" class="form-control" id="inputAddress" placeholder="Estudiante" required>
+                                                    <input type="text" name="usuario" class="form-control" id="inputAddress" placeholder="@usuario" required>
                                                   </div>
                                                 <div class="col-md-6">
                                                 </div>

@@ -13,6 +13,29 @@
                             <div class="alert alert-secondary" role="alert">
                                 Inicio/Tablas/<a href="#" class="alert-link">Estudiantes</a>.
                               </div>
+                <!--Alerta-->
+              <div class="card-body">
+                @if (session('success'))
+                <div class="alert alert-success" role="success">
+                  {{ session('success') }}
+                </div>
+                @endif
+                <!--Alerta de borrado-->
+                <div class="card-body">
+                @if (session('danger'))
+                <div class="alert alert-danger" role="danger">
+                  {{ session('danger') }}
+                </div>
+                @endif
+                <!--Alerta de Editado-->
+
+                <div class="card-body">
+                @if (session('info'))
+                <div class="alert alert-info" role="info">
+                  {{ session('info') }}
+                </div>
+                @endif
+                
                             <!-- DataTales Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
