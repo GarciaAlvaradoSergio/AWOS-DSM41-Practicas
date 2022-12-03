@@ -6,6 +6,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubactivityController;
+use App\Http\Controllers\ImageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +31,5 @@ Route::resource('activities', ActivityController::class);
 Route::resource('categories', CategoryController::class);
 
 Route::resource('subactivities', SubactivityController::class);
+
+Route::resource('images', ImageController::class);
