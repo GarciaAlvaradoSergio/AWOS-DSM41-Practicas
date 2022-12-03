@@ -91,7 +91,7 @@ class UserController extends Controller
             $data['contraseña']=bcrypt($request->contraseña);
         }
         $user->update($data);
-        return redirect()->route('users.index')->with('info','Usuario editado correctamente');
+        return redirect()->route('users.index')->with('success','Usuario editado correctamente');
     }
 
     /**
