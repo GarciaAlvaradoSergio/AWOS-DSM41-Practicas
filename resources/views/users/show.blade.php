@@ -25,8 +25,8 @@
                 <a href="{{ route('users.index') }}" class="btn btn-sm btn-success mr-0 boton" style="margin-left: 120px;
                                                                                                       margin-top:50px;"> Volver </a>
             </div>
-            <h5 class="card__name">{{$user->nombre }} {{ $user->apellido}}</h5>
             <p class="card__position">Estudiante</p>
+            <h5 class="card__name">{{$user->nombre }} {{ $user->apellido}}</h5>
             <p class="card__position">Correo:</p>
             <p class="card__position">{{$user->correo}}</p>
             <div class="button-container">

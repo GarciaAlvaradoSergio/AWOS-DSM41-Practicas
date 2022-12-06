@@ -41,12 +41,12 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Componentes:</h6>
-                        <a class="collapse-item" href="/images">Imagenes</a>
                         <a class="collapse-item" href="/users">Estudiantes</a>
                         <a class="collapse-item" href="/events">Eventos</a>
                         <a class="collapse-item" href="/activities">Actividades</a> 
                         <a class="collapse-item" href="/categories">Categorias</a>
                         <a class="collapse-item" href="/subactivities">Subactividades</a>      
+                        <a class="collapse-item" href="/images">Imagenes</a>
                     </div>
                 </div>
             </li>
