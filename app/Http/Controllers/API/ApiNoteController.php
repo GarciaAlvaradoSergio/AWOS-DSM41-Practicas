@@ -1,19 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
-use App\Http\Requests\StoreNoteRequest;
-use App\Http\Requests\UpdateNoteRequest;
-use App\Models\Note;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\Category;
 
-class NoteController extends Controller
+class ApiNoteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $notes = Note::all();
@@ -90,5 +84,5 @@ class NoteController extends Controller
     {
         $note->delete();
         return redirect('notes')->with('danger','Se borro correctamente la nota');
-    }
+    }   
 }

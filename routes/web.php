@@ -7,6 +7,7 @@ use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubactivityController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\NoteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,3 +34,5 @@ Route::resource('categories', CategoryController::class);
 Route::resource('subactivities', SubactivityController::class);
 
 Route::resource('images', ImageController::class);
+
+Route::resource('notes', NoteController::class);

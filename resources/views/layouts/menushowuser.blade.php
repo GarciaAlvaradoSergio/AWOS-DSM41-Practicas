@@ -42,6 +42,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Componentes:</h6>
                         <a class="collapse-item active" href="/users">Estudiantes</a>
+                        <a class="collapse-item" href="/notes">Notas</a>
                         <a class="collapse-item" href="/events">Eventos</a>
                         <a class="collapse-item" href="/activities">Actividades</a>
                         <a class="collapse-item" href="/categories">Categorias</a>     

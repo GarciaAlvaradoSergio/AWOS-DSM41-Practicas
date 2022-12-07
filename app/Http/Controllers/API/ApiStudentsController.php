@@ -24,7 +24,8 @@ class ApiStudentsController extends Controller
      */
     public function create()
     {
-        //
+        $students = User::get();
+        return view('users.add', compact ('students'));
     }
 
     /**
@@ -35,7 +36,11 @@ class ApiStudentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $students = User::create($request->only('nombre', 'apellido', 'usuario', 'correo')
+    +[
+        'contraseña'=>bcrypt($request->input('contraseña'))
+    ]);
+        return redirect()->route('users.show', $students->id)->with('success', 'Estudiante creado correctamente');
     }
 
     /**
@@ -44,9 +49,9 @@ class ApiStudentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($student)
     {
-        //
+        return view('users.show', compact('student'));
     }
 
     /**
@@ -55,9 +60,9 @@ class ApiStudentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $student)
     {
-        //
+        return view('users.edit', compact('student'));
     }
 
     /**
@@ -69,7 +74,19 @@ class ApiStudentsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $student = User::findOrFail($id);
+        $data = $request ->only ('nombre','apellido','usuario','correo');
+        if(trim($request->contraseña)=='')
+        {
+            $data=$request->except('contraseña');
+        }
+        else{
+            $data=$request->all();
+            $data['contraseña']=bcrypt($request->contraseña);
+        }
+        $student->update($data);
+        return redirect()->route('users.index')->with('success','Usuario editado correctamente');
+    
     }
 
     /**
@@ -78,8 +95,9 @@ class ApiStudentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $student)
     {
-        //
+        $user->delete();
+        return redirect('users');
     }
 }

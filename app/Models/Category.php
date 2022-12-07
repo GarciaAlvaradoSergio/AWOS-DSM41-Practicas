@@ -16,6 +16,9 @@ class Category extends Model
     public function actividad(){
         return $this->hasOne(Activity::class);
     }
+    public function nota(){
+        return $this->belongsTo(Note::class);
+    }
     protected $fillable = [
         'nombreCategoria',
     ];
