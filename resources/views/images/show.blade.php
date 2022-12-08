@@ -37,7 +37,7 @@
               </tbody>
             </table>
             <div class="button-container">
-              <a href="{{ route('categories.index') }}" class="btn btn-sm btn-success mr-3"> Volver </a>
+              <a href="{{ route('images.index') }}" class="btn btn-sm btn-success mr-3"> Volver </a>
               <a href="#" class="btn btn-sm btn-twitter"> Editar </a>
             </div>
           </div>
