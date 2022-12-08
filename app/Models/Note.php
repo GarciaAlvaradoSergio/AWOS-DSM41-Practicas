@@ -17,4 +17,5 @@ class Note extends Model
     public function categoria(){
         return $this->hasOne(Category::class, 'id','categoria_id');
     }
+    
 }

@@ -2,7 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ApiStudentsController;
+use App\Http\Controllers\ApiUserController;
+use App\Http\Controllers\ApiNoteController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,4 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::Apiresource('students',ApiStudentsController::class);
+Route::Apiresource('students',ApiUserController::class);
+
+Route::Apiresource('notes',ApiNoteController::class);

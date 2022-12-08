@@ -11,15 +11,16 @@ class Category extends Model
 {
     use HasFactory, SoftDeletes;
     public function evento(){
-        return $this->belongsTo(Evento::class);
+        return $this->belongsTo(Event::class);
     }
     public function actividad(){
         return $this->hasOne(Activity::class);
-    }
+    } 
     public function nota(){
-        return $this->belongsTo(Note::class);
+        return $this->hasOne(Note::class);
     }
     protected $fillable = [
         'nombreCategoria',
     ];
+
 }
