@@ -17,7 +17,7 @@ class Category extends Model
         return $this->hasOne(Activity::class);
     } 
     public function nota(){
-        return $this->hasOne(Note::class);
+        return $this->hasMany(Note::class, 'id');
     }
     protected $fillable = [
         'nombreCategoria',

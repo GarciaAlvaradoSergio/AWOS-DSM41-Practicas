@@ -15,7 +15,7 @@ class Note extends Model
         'categoria_id'
     ];
     public function categoria(){
-        return $this->hasOne(Category::class, 'id','categoria_id');
+        return $this->belongsTo(Category::class, 'categoria_id');
     }
-    
+
 }
