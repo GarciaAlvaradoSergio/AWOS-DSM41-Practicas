@@ -32,13 +32,15 @@
                     <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su sesión actual.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                        <a class="btn btn-primary" href="login.html">Cerrar sesión</a>
+                        <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();  document.getElementById('logout-form').submit();">Cerrar sesión</a>
                     </div>
                 </div>
             </div>
         </div>
          <!-- Logout Modal termina-->
-
+         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+         </form>
             
     <!-- Bootstrap core JavaScript-->
     <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>

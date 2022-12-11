@@ -20,19 +20,20 @@ use App\Http\Controllers\NoteController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['middleware' => 'auth'], function (){
+    Route::resource('users', UserController::class);
+    Route::resource('events', EventController::class);
+    Route::resource('activities', ActivityController::class);
+    Route::resource('categories', CategoryController::class);
+    Route::resource('subactivities', SubactivityController::class);
+    Route::resource('images', ImageController::class);
+    Route::resource('notes', NoteController::class);
 });
 
-Route::resource('users', UserController::class);
 
-Route::resource('events', EventController::class);
-
-Route::resource('activities', ActivityController::class);
-
-Route::resource('categories', CategoryController::class);
-
-Route::resource('subactivities', SubactivityController::class);
-
-Route::resource('images', ImageController::class);
-
-Route::resource('notes', NoteController::class);

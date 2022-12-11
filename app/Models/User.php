@@ -10,9 +10,9 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 
-class User extends Model
+class User extends Authenticatable
 {
-    use HasFactory,SoftDeletes;
+    use HasApiTokens, HasFactory, Notifiable,SoftDeletes;
     public function evento(){
         return $this->hasMany(Event::class);
     }
