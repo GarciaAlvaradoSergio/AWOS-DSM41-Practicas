@@ -46,7 +46,7 @@
                         <a class="collapse-item" href="/events">Eventos</a>
                         <a class="collapse-item" href="/activities">Actividades</a> 
                         <a class="collapse-item" href="/categories">Categorias</a>
-                        <a class="collapse-item" href="/subactivities">Subactividades</a>      
+                        <!-- <a class="collapse-item" href="/subactivities">Subactividades</a>-->    
                         <a class="collapse-item" href="/images">Imagenes</a>
                     </div>
                 </div>
